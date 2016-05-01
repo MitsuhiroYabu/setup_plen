@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo export ROS_HOSTNAME=localhost >> /etc/profile
 echo export ROS_MASTER_URI=http://localhost:11311 >> /etc/profile
 echo export ROS_ROOT=/opt/ros/indigo >> /etc/profile
@@ -14,6 +15,7 @@ touch /opt/ros/indigo/.catkin
 cp plenblenode.patch /opt/ros/indigo/lib/plen/plenblenode.patch
 cd /opt/ros/indigo/lib/plen/
 patch -u bleNode.py < plenblenode.patch
+
 cd /home/root/setup_plen/
 cp plen-dev.sh /home/root/plen-dev.sh
 chmod 755 /home/root/plen-dev.sh
