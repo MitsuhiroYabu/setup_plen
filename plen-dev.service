@@ -1,0 +1,11 @@
+[Unit]
+Description = plen-dev ros
+After = bluetooth-rfkill-event.service bluetooth.service bluetooth.target
+
+[Service]
+ExecStart = /home/root/plen.sh
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
