@@ -1,0 +1,20 @@
+--- bleNode.py
++++ bleNode_after.py
+@@ -3,7 +3,7 @@
+ import subprocess
+ import time
+ 
+-ps = subprocess.Popen(['ps', 'aux'], stdout=subprocess.PIPE,)
++ps = subprocess.Popen(['ps'], stdout=subprocess.PIPE,)
+ grep = subprocess.Popen(['grep', 'bluetooth'], stdin=ps.stdout, stdout=subprocess.PIPE,)
+ end_of_pipe = grep.stdout
+ 
+@@ -22,7 +22,7 @@
+                         moji_2.pop(val-val2)
+                         val2=val2+1
+         print moji_2
+-        kill = subprocess.Popen(['kill',moji_2[1]], stdout=subprocess.PIPE,)
++        kill = subprocess.Popen(['kill',moji_2[0]], stdout=subprocess.PIPE,)
+         end_of_pipe = kill.stdout
+         detect = 0
+ time.sleep(1.0)
