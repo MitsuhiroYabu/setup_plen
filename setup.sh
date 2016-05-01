@@ -14,7 +14,7 @@ touch /opt/ros/indigo/.catkin
 cp plenblenode.patch /opt/ros/indigo/lib/plen/plenblenode.patch
 cd /opt/ros/indigo/lib/plen/
 patch -u bleNode.py < plenblenode.patch
-
+cd /home/root/setup_plen/
 cp plen-dev.sh /home/root/plen-dev.sh
 chmod 755 /home/root/plen-dev.sh
 cp plen-dev.service /etc/systemd/system/plen-dev.service
