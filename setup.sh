@@ -20,6 +20,7 @@ chmod 755 /home/root/plen-dev.sh
 cp plen-dev.service /etc/systemd/system/plen-dev.service
 chmod 755 /etc/systemd/system/plen-dev.service
 
+cd /etc/systemd/system/
 systemctl enable plen-dev
 systemctl start plen-dev
 
