@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo export ROS_HOSTNAME=localhost >> /etc/profile
-echo export ROS_MASTER_URI=http://localhost:11311 >> /etc/profile
+echo export ROS_HOSTNAME=192.168.42.1 >> /etc/profile
+echo export ROS_IP=192.168.42.1 >> /etc/profile
+echo export ROS_MASTER_URI=http://192.168.42.1:11311 >> /etc/profile
 echo export ROS_ROOT=/opt/ros/indigo >> /etc/profile
 echo export ROS_DISTRO=indigo >> /etc/profile
 echo export ROS_PACKAGE_PATH=/opt/ros/indigo/share >> /etc/profile
